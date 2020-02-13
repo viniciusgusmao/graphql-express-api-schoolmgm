@@ -18,7 +18,10 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "student_id",
       through: models.StudentParent,
       onDelete: 'cascade',
-      as: "parents"
+      as: {
+        singular: "Parent",
+        plural: "parents"
+      }
     });
   };
   return Student;

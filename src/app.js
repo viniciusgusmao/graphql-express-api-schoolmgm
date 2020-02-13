@@ -37,7 +37,7 @@ var schema = buildSchema(`
     email: String,
     enrollment: Int,
     class: Class,
-    parent: [Parent]    
+    parents: [Parent]    
   }
   type Query {
     student(id: ID!): Student
@@ -86,6 +86,10 @@ var providers = {
     const students = await models.Student.findAll({
       attributes: [ 'id', 'name', "email", "enrollment" ],
       include: [
+        {
+          association: "parents",
+          attributes: [ "id", "name", "email", "type" ]
+        },
         {
           association: "class",
           attributes: [ "id", "name", "abbreviation", "shift", "year" ],
