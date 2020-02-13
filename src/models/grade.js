@@ -1,7 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Grade = sequelize.define('Grade', {
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      unique: true
+    },
     abbreviation: DataTypes.STRING,
     course_id: DataTypes.INTEGER
   }, {});

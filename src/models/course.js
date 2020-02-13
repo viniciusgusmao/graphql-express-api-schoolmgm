@@ -1,7 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Course = sequelize.define('Course', {
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      unique: true
+    },
     abbreviation: DataTypes.STRING
   }, {});
   Course.associate = function(models) {

@@ -1,11 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const StudentFather = sequelize.define('StudentFather', {
+  const StudentParent = sequelize.define('StudentParent', {
     student_id: DataTypes.INTEGER,
     father_id: DataTypes.INTEGER
   }, {});
-  StudentFather.associate = function(models) {
+  StudentParent.associate = function(models) {
     // associations can be defined here
   };
-  return StudentFather;
+  return StudentParent;
 };

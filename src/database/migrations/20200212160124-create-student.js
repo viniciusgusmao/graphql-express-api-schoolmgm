@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       enrollment: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       class_id: {
         type: Sequelize.INTEGER

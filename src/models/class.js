@@ -1,7 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Class = sequelize.define('Class', {
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      unique: true
+    },
     abbreviation: DataTypes.STRING,
     shift: DataTypes.STRING,
     year: DataTypes.INTEGER,
