@@ -12,7 +12,7 @@ faker.locale = "pt_BR";
     attributes: ["id"]
   });
   let dynClasses, father, mother, type;
-  for (cls in classes){
+  for (cls of classes){
     dynClasses = await models.Student.findByPk(cls.id);
     type = "father";
     father = await models.Parent.create({

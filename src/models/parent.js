@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       through: models.StudentParent,
       onDelete: 'cascade',
       as: {
-        singular: "student",
+        singular: "Student",
         plural: "students"
       }
     });

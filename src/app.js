@@ -3,14 +3,9 @@ const graphqlHTTP = require('express-graphql');
 const { buildSchema } = require('graphql');
 
 const models = require("./models");
-const routes = require("./routes");
+const routes = require("./routes")
 
 var schema = buildSchema(`
-  type Parent{
-    id: ID,
-    name: String,
-    email: String
-  }
   type Course {
     id: ID,
     name: String,
@@ -31,17 +26,28 @@ var schema = buildSchema(`
     grade: Grade
     students: [Student]
   }
-  type Student {
+  type Student{
     id: ID,
     name: String,
     email: String,
     enrollment: Int,
-    class: Class,
-    parents: [Parent]    
+    class: Class
+    parents: [Parent]
+  }
+  type Parent{
+    id: ID,
+    name: String,
+    email: String
+    students: [Student]
+    type: String
+  }
+  type StudentParent {
+    type: String
   }
   type Query {
     student(id: ID!): Student
     students: [Student]
+    parents: [Parent]
     course(id: ID!): Course
     courses: [Course]
     grade(id: ID!): Grade
@@ -82,13 +88,31 @@ var providers = {
     const courses = await models.Course.findAll();
     return courses;
   },
+  parents: async () => {
+    const parents = await models.Parent.findAll({
+      attributes: [ 'id', 'name', "email" ],
+      include: [
+        {
+          association: "students",
+          attributes: [ "id", "name", "email", "enrollment" ],
+          through: {
+            attributes: ["type"]
+          }
+        },
+      ]
+    });
+    return parents;
+  },
   students: async () => {
     const students = await models.Student.findAll({
       attributes: [ 'id', 'name', "email", "enrollment" ],
       include: [
         {
           association: "parents",
-          attributes: [ "id", "name", "email", "type" ]
+          attributes: [ "id", "name", "email" ],
+          through: {
+            attributes: ["type"]
+          }
         },
         {
           association: "class",
@@ -135,7 +159,6 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true,
 }));
 
-// app.use(express.json());
-// app.use(routes);
+app.use(routes);
 
 module.exports = app;

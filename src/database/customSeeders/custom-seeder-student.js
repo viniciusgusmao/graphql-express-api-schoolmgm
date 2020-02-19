@@ -4,13 +4,17 @@ const faker = require("faker");
 faker.locale = "pt_BR";
 
 (async () => {
+  await models.Student.destroy({
+    where: {},
+    truncate: false
+  })
   const classes = await models.Class.findAll({
     attributes: ["id"]
   });
   const min = classes[0].id
   const max = classes[classes.length - 1].id
   let students = [];
-  for (let i = 0; i < 200; i++){
+  for (let i = 0; i < 100; i++){
     students.push({
       name: faker.name.findName(),
       email: faker.internet.email(),
