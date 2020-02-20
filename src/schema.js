@@ -32,13 +32,14 @@ module.exports = {
   }
   type Parent{
     id: ID,
-    name: String,
+    name: String!,
     email: String
-    students: [Student]
-    type: String
   }
-  type StudentParent {
-    type: String
+  input StudentParentInput{
+    name: String!
+    email: String
+    enrollment: Int!
+    class_id: Int!
   }
   type Query {
     student(id: ID!): Student
@@ -51,6 +52,12 @@ module.exports = {
     grades: [Grade]
     class(id: ID!): Class
     classes: [Class]    
+  }
+  type Mutation{
+    createCourse(name: String!, abbreviation: String): Course
+    createGrade(name: String!, abbreviation: String, course_id: Int!): Grade
+    createClass(name: String!, abbreviation: String, shift: String!, year: Int!, grade_id: Int!): Class
+    createStudent(name: String!, email: String, enrollment: Int!, class_id: Int!, parents: [StudentParentInput]): Student
   }
 `)
 }

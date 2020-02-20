@@ -32,6 +32,10 @@ module.exports = {
       ]
     });
     return classes;
+  },
+  async createClass(name, abbreviation, shift, year, course_id){
+    const class_ = await models.Class.create({ name, abbreviation, shift, year, course_id })
+    return class_;
   }
  
 }

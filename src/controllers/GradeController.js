@@ -20,5 +20,9 @@ module.exports = {
       }]
     });
     return grades;
-  } 
+  },
+  async createGrade(name, abbreviation, course_id){
+    const grade = await models.Grade.create({ name, abbreviation, course_id })
+    return grade;
+  }
 }

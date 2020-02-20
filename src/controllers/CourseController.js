@@ -8,5 +8,9 @@ module.exports = {
   async course(id){
     const courses = await models.Course.findByPk(id);
     return courses;
+  },
+  async createCourse(name, abbreviation){
+    const course = await models.Course.create({ name, abbreviation })
+    return course;
   }
 }
