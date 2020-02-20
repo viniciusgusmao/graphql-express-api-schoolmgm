@@ -34,13 +34,7 @@ module.exports = {
     id: ID,
     name: String!,
     email: String
-  }
-  input StudentParentInput{
-    name: String!
-    email: String
-    enrollment: Int!
-    class_id: Int!
-  }
+  }  
   type Query {
     student(id: ID!): Student
     students: [Student]
@@ -57,7 +51,7 @@ module.exports = {
     createCourse(name: String!, abbreviation: String): Course
     createGrade(name: String!, abbreviation: String, course_id: Int!): Grade
     createClass(name: String!, abbreviation: String, shift: String!, year: Int!, grade_id: Int!): Class
-    createStudent(name: String!, email: String, enrollment: Int!, class_id: Int!, parents: [StudentParentInput]): Student
+    createStudent(name: String!, email: String, enrollment: Int!, class_id: Int!): Student
   }
 `)
 }

@@ -22,7 +22,7 @@ var providers = {
   parent: ({id}) => parentController.parent(id),
   students: () => studentController.students(),  
   student: ({id}) => studentController.student(id),
-  createStudent: ({name, email, enrollment, parents }) => studentController.createStudent(name, email, enrollment, parents),
+  createStudent: ({name, email, enrollment, class_id }) => studentController.createStudent(name, email, enrollment, class_id),
 };
 
 const app = express();

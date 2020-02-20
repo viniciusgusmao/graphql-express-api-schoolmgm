@@ -47,19 +47,10 @@ module.exports = {
     })
     return student;
   },
-  async createStudent(name, email, enrollment, parents){
+  async createStudent(name, email, enrollment, class_id){
       const student = await models.Student.create({
-        name, email, enrollment
+        name, email, enrollment, class_id
       });
-      for (parent of parents){
-        let p = await models.Parent.create({
-          name: parent.name,
-          email: parent.email,
-          createdAt: new Date(),
-          updatedAt: new Date()
-        })
-        await student.addParent(p)
-      }
       return student;
   }
  
