@@ -13,7 +13,7 @@ echo "FINISHED"
 npx sequelize db:migrate
 echo "5/5 - Running seeders..."
 npx sequelize db:seed:all
-echo "It could takes a few seconds"
+echo "Be patient, it could takes a few seconds..."
 node src/database/customSeeders/custom-seeder-student.js
 node src/database/customSeeders/custom-seeder-parent.js
 echo "FINISHED"

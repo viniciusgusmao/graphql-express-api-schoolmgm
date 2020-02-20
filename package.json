@@ -10,10 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
-    "factory-girl": "^5.0.4",
     "faker": "^4.1.0",
     "graphql": "^14.6.0",
     "nodemon": "^2.0.2",
