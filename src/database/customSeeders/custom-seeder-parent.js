@@ -14,22 +14,20 @@ faker.locale = "pt_BR";
   let dynClasses, father, mother, type;
   for (cls of classes){
     dynClasses = await models.Student.findByPk(cls.id);
-    type = "father";
     father = await models.Parent.create({
       name: faker.name.findName(),
       email: faker.internet.email(),
       createdAt: new Date(),
       updatedAt: new Date()
     })
-    await dynClasses.addParent(father,{ through: { type } });  
-    type = "mother";
+    await dynClasses.addParent(father);  
     mother = await models.Parent.create({
       name: faker.name.findName(),
       email: faker.internet.email(),
       createdAt: new Date(),
       updatedAt: new Date()
     })
-    await dynClasses.addParent(mother,{ through: { type } });  
+    await dynClasses.addParent(mother);  
   }  
 })()
 

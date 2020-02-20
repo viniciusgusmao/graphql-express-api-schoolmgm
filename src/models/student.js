@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     Student.belongsToMany(models.Parent, {
       foreignKey: "student_id",
-      through: models.StudentParent,
+      through: 'StudentParents',
       onDelete: 'cascade',
       as: {
         singular: "Parent",

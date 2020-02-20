@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   Parent.associate = function(models) {
     Parent.belongsToMany(models.Student, {
       foreignKey: "parent_id",
-      through: models.StudentParent,
+      through: 'StudentParents',
       onDelete: 'cascade',
       as: {
         singular: "Student",
