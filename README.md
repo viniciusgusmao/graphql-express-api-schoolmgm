@@ -4,8 +4,7 @@
 
 ## Overview and Goals
  This is sample project using Express and Graphql as it main technologies. My goal with it is practice and improve my skills in Nodejs, and, consequently, share experiency and a bit knowledge with commnutity.
-
-Was built a mini School Management System, with a few tables representing the basic of exist in a school, like: courses, grades, classes, students and parents.
+Was built a mini School Management System, with a few tables representing a  basic structure   existing in a school, like: courses, grades, classes, students and parents.
 
 ### Data modeling
 ![enter image description here](https://lh3.googleusercontent.com/WDzCsXGfAL_0iVpUoNMEqcPTE68OgKpLhEC1NHrqCoNsW9IOQliu3rzblLps331DQyMrTB-KVFdAAEebm9a-wo4tsBmURd2Aszj4iMjBST9fR1tV4QYItCcWAPDkyBu8GmbAIefjTewoPQuXKtbALxXE7n7ulM-WMvreAB--oMeXNQjpzO_3LQhlou64Fw_0K6iyYemCiRDAT8hTSuZiL28hHB-i7arkkfn9R22VjDl-rTTu3Wjq8YiRVSTNKWb4iMoOP-vfIzS57JVoxZg_Tho8uj09-aqO7R1vkZPnKTF9mm50YIhy5VfVa1-mziwDK1thdmtSFpnK5TNS-5-bb4wGyiMZYHkl-h3yZ6VNMGLlRApg80qHRhV5pnbGFe01cAIVkdm9X5w-2UX8nD4iJVMt1-Yr_Q244Uw7hCJBA_hWcTa_bPE_nrLMmHl4yBBarKwalmPwpKQsnrBMb8-oebE5TDGd4MsFhyjygrTYxtZGsKlMLjtULE6ZItfKP_ccpDPMTdDekz49looERzIKgaiV5Egl8UaDFGKLJ_yuDcqj71W6FEcHG473ACg7S46gkIE8FSmo2xzSw9GbpHVR7Vq3DJ-lg7g8ZkRDeLR_oF3AbW2f2UcOXQ9Wc197nKmNjAx7wowtEZ6XoVhv0W9TAIu3YRWdbe17k-_9NbjDrxMEK88RbaYy2CM=w710-h418-no)
