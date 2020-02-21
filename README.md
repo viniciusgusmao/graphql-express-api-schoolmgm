@@ -31,7 +31,8 @@ Was built a mini School Management System, with a few tables representing a  bas
 ## Installation
 
 **Prerequisites**: Nodejs, NPM, and Git Bash installed.
-Apply all the commands below on the root folder
+
+Please execute all the commands below on the root folder project.
 ### 1. Install dependencies
 ```js
 npm install
