@@ -10,7 +10,7 @@ Was built a mini School Management System, with a few tables representing a  bas
 ### Data modeling
 ![Data modeling](https://i.ibb.co/ctCtMKv/Mini-School-Management.jpg)
 
-### Screenshot
+### Screenshots
 ![Graphql demonstration 1](https://i.ibb.co/7r3gpdT/Captura-de-tela-de-2020-02-20-22-14-24.png)
 
 ![Graphql demonstration 2](https://i.ibb.co/7QJ2gnF/Captura-de-tela-de-2020-02-20-22-23-02.png)
@@ -22,7 +22,7 @@ Was built a mini School Management System, with a few tables representing a  bas
  - Create courses, grades, classes and students.
 
 ### Main technologies used
- - Node js
+ - Nodejs
  - Express
  - Graphql
  - Sequelize
