@@ -4,6 +4,7 @@
 
 ## Overview and Goals
  This is sample project using Express and Graphql as it main technologies. My goal with it is practice and improve my skills in Nodejs, and, consequently, share experiency and a bit knowledge with commnutity.
+ 
 Was built a mini School Management System, with a few tables representing a  basic structure   existing in a school, like: courses, grades, classes, students and parents.
 
 ### Data modeling
